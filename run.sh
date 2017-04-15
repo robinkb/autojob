@@ -2,11 +2,7 @@
 
 set -o errexit
 
-WORK_DIR=$PWD
-PROJECTS_DIR=$WORK_DIR/projects
-JOBS_DIR=$WORK_DIR/jobs
-RUN_DIR=$WORK_DIR/run
-WORKSPACES_DIR=$WORK_DIR/workspaces
+source ./common_vars
 
 # Ensure the necessary directories are all here.
 mkdir -p $PROJECTS_DIR
@@ -27,9 +23,10 @@ for job in $JOBS; do
   # If the job has no UUID, generate one
   if [ ! $UUID ]; then
     UUID=$(uuidgen)
-    echo UUID="$UUID" >> $CONF
+    echo UUID="$UUID" >> $job
   fi
 
+  # TODO: Support running jobs in containers
   echo "Running job $NAME"
   sh $WORK_DIR/job.sh $job
 done

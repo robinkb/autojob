@@ -2,13 +2,8 @@
 
 set -o errexit
 
+source ./common_vars
 source $1
-
-WORK_DIR=$PWD
-PROJECTS_DIR=$WORK_DIR/projects
-JOBS_DIR=$WORK_DIR/jobs
-RUN_DIR=$WORK_DIR/run
-WORKSPACES_DIR=$WORK_DIR/workspaces
 
 trap 'cleanup' EXIT
 
