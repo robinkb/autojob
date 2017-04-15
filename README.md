@@ -1,4 +1,4 @@
-#Autojob#
+#Autojob
 
 A very simple job executor that pulls a git repository,
 and runs an Autofile script contained in the repo. This might remind you of
