@@ -62,19 +62,23 @@ function execute {
 }
 
 function message_start {
-  echo
-  echo "================"
-  echo "Executor started"
-  echo "Time: $(date)"
-  echo
+  cat << EOF
+
+================
+Executor started
+Time: $(date)
+
+EOF
 }
 
 function message_exit {
-  echo
-  echo "Executor exiting"
-  echo "Time: $(date)"
-  echo "================"
-  echo
+  cat << EOF
+
+Executor exiting
+Time: $(date)
+================
+
+EOF
 }
 
 # Clean up the lockfile and workspace when the executor exits.
