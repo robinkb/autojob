@@ -1,2 +1,6 @@
-NAME="Sample job"
-URL="https://url/to/repository"
+# The minimal required variables.
+name="Sample job"
+url="https://url/to/repository"
+
+# Overwrite the default workspace for this specific job.
+AJ_WORKSPACES=/tmp
