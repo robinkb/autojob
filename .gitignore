@@ -1,3 +1,5 @@
+jobs/testing.conf
+lock/
+logs/
 projects/
-run/
 workspaces/
